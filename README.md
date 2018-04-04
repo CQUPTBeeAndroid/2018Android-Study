@@ -19,7 +19,7 @@
   
 - 在你自己电脑上创建一个文件夹,比如命名为2018Android-Study,然后进入该文件夹，在文件夹中打开命令行窗口，输入一下命令(注意把中文部分替换成你自己的昵称)把远程repo克隆到本地:
 
-git clone git@github.com:你的github昵称/Android-Study.git
+git clone git@github.com:你的github昵称/2018Android-Study.git
 
 - 现在在你本地应该有这样一个目录：Android-Study/2018Android-Study,进入该目录，你可以在这里面创建你的项目文件夹以及你的所有代码。再次提醒不要修改别人的文件夹<br/>
 - 当你在本地完成你的代码后(可以本地多次commit),将你的本地repo push 到远程repo,
