@@ -7,6 +7,7 @@
 ## 学习路线 
 
 * [Level1 能力初养成](/source/Stage1.md)
+* [Level2 Android初试探](/source/Stage2.md)
 
 ## 部署说明
 
