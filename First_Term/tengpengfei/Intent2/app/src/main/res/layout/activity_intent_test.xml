@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".intentTestActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/IntentDataOutput"
+        android:layout_centerInParent="true"
+        android:text=""
+        android:background="#eee"
+        android:textColor="#b20e00"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/myButton"
+        android:layout_above="@+id/InputText"
+        android:layout_centerHorizontal="true"
+        android:text="返回上一级并返回数据"
+        android:textColor="#b20e00"
+        tools:ignore="InvalidId" />
+
+    <EditText
+        android:id="@id/InputText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/IntentDataOutput" />
+
+</RelativeLayout>
