@@ -35,7 +35,7 @@
 ## 任务三 内容提供器，播放本地音频和视频
 - 参考资料
   - [ContentProvider从入门到精通](https://www.jianshu.com/p/f5ec75a9cfea)
- - [Android四大组件之ContentProvider（二）读取设备上的图片、音频和视频](https://blog.csdn.net/deng0zhaotai/article/details/12446077)
+  - [Android四大组件之ContentProvider（二）读取设备上的图片、音频和视频](https://blog.csdn.net/deng0zhaotai/article/details/12446077)
 - 作业：
      - 用内容提供器实现选择本地照片并加载到界面
      - 播放本地音频和视频
