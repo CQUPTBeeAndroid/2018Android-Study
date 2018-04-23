@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/back_item"
+        android:title="返回上一页"/>
+
+    <item
+        android:id="@+id/click_item"
+        android:title="抖一抖"/>
+</menu>
