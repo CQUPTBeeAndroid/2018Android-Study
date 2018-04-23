@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="activitytest.example.com.work02_lv2.MainActivity">
+
+    <ImageView
+        android:id="@+id/QQ"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/account"
+        android:layout_alignLeft="@+id/account"
+        android:layout_alignStart="@+id/account"
+        android:layout_marginBottom="22dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginStart="38dp"
+        android:adjustViewBounds="false"
+        android:src="@drawable/img02" />
+
+    <TextView
+        android:id="@+id/account"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/password"
+        android:layout_alignLeft="@+id/password"
+        android:layout_alignStart="@+id/password"
+        android:text="2436017719" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:hint="Password：123456789" />
+
+    <Button
+        android:id="@+id/landing"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_alignLeft="@+id/password"
+        android:layout_alignStart="@+id/password"
+        android:layout_below="@+id/password"
+        android:layout_marginTop="23dp"
+        android:background="@drawable/img01"
+        android:text="登陆"
+        android:textSize="18dp" />
+
+
+
+</RelativeLayout>
