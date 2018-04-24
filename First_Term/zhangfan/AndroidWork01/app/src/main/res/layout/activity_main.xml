@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edt_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp" />
+
+    <Button
+        android:id="@+id/btn_intent01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="显式Intent"
+        android:textAllCaps="false"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/btn_intent02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="隐式Intent"
+        android:textAllCaps="false"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/btn_send_massage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="传递信息"/>
+
+
+</LinearLayout>
