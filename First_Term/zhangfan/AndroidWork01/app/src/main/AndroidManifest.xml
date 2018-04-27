@@ -9,14 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:label="">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ScendActivity">
+        <activity
+            android:name=".ScendActivity"
+            android:label="">
             <intent-filter>
                 <action android:name="com.example.zhangfan.androidwork01.ACTION_START" />
 
@@ -24,8 +28,13 @@
                 <category android:name="com.example.zhangfan.androidwork01.FIRST_CATEGORY" />
             </intent-filter>
         </activity>
-        <activity android:name=".ListViewActivity" />
-        <activity android:name=".RecyclerViewActivity"></activity>
+        <activity
+            android:name=".ListViewActivity"
+            android:label="" />
+        <activity
+            android:name=".RecyclerViewActivity"
+            android:label=""></activity>
+        <activity android:name=".FruitActivity"></activity>
     </application>
 
 </manifest>
