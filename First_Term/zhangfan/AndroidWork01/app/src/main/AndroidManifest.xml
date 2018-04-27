@@ -18,11 +18,14 @@
         </activity>
         <activity android:name=".ScendActivity">
             <intent-filter>
-                <action android:name="com.example.zhangfan.androidwork01.ACTION_START"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="com.example.zhangfan.androidwork01.FIRST_CATEGORY"/>
+                <action android:name="com.example.zhangfan.androidwork01.ACTION_START" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.example.zhangfan.androidwork01.FIRST_CATEGORY" />
             </intent-filter>
         </activity>
+        <activity android:name=".ListViewActivity" />
+        <activity android:name=".RecyclerViewActivity"></activity>
     </application>
 
 </manifest>

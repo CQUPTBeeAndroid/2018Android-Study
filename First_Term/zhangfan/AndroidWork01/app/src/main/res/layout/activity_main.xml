@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
 
     <EditText
         android:id="@+id/edt_message"
@@ -33,7 +32,22 @@
         android:id="@+id/btn_send_massage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:text="传递信息"/>
 
+    <Button
+        android:id="@+id/btn_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ListView"
+        android:textAllCaps="false"
+        android:layout_marginBottom="10dp"/>
+    <Button
+        android:id="@+id/btn_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RecyclerView"
+        android:textAllCaps="false"
+        android:layout_marginBottom="10dp"/>
 
 </LinearLayout>
