@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.myapplication.Main3Activity">
+
+    <include layout="@layout/title"/>
+
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="快看下面"
+        android:textColor="#00ff00"
+        android:textSize="24sp" />
+
+    <Button
+    android:id="@+id/button_3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="快点我，快点我"/>
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入一些字母试试"
+        android:maxLines="2" />
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:src="@drawable/dongtai"/>
+
+
+
+</LinearLayout>
