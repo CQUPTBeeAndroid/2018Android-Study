@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
         Button button3=(Button)findViewById(R.id.button_3);
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    }
+
 }
 
 

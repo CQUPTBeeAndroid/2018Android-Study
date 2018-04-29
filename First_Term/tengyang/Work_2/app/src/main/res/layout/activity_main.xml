@@ -10,7 +10,6 @@
         android:id="@+id/button_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="点击进入listview星座页面" />
 
     <Button
         android:id="@+id/button_2"
@@ -18,10 +17,5 @@
         android:layout_height="wrap_content"
         android:text="进入另一个界面" />
 
-    <Button
-        android:id="@+id/button_3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="进入recyclerview星座页面" />
 
 </LinearLayout>
