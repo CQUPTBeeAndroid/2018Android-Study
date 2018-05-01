@@ -9,6 +9,7 @@
 * [Level1 能力初养成](/source/Stage1.md)
 * [Level2 Android初试探](/source/Stage2.md)
 * [Level3 小有成就](/source/Stage3.md)
+* [Level4 苟有恒，何必三更眠五更起](/source/Stage4.md)
 
 ## 部署说明
 
