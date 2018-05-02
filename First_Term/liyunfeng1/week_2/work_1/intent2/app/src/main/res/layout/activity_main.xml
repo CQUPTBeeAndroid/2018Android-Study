@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="在这输入传到第二界面的信息"/>
+
+        <Button
+            android:id="@+id/startSecondActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="启动第二界面" />
+
+        <Button
+            android:id="@+id/startphone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="启动电话" />
+
+        <Button
+            android:id="@+id/startWeb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="启动浏览器" />
+
+        <Button
+            android:id="@+id/startMail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="启动短信" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
