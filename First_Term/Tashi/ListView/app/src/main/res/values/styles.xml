@@ -11,4 +11,6 @@
 
     <style name="Theme">ma</style>
 
+    <style name="MyBaseTheme" parent="AppTheme"/>
+
 </resources>

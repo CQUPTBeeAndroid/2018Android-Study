@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+    <android.support.v7.widget.CardView
+        app:cardElevation="2dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
+        android:id="@+id/item_view_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="7">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5">
+
+            <ImageView
+                android:id="@+id/author_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:padding="1.2dp"
+                android:src="@mipmap/halloffame"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/author_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="9dp"
+                android:layout_toEndOf="@id/author_head"
+                android:textSize="15sp"
+                tools:text="author_id" />
+
+            <TextView
+                android:id="@+id/article_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/author_id"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"
+                tools:text="佛秀不负如来" />
+
+            <TextView
+                android:id="@+id/intro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/article_title"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:textSize="15sp"
+                tools:text="爱与佛不可兼得，不负如来便负卿" />
+
+            <ImageView
+                android:id="@+id/read_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/intro"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:padding="2dp"
+                android:src="@mipmap/article_read_icon"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/count_read"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/intro"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/read_icon"
+                android:text="@string/test"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/collection_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/textView"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/article_title"
+                android:padding="2dp"
+                android:src="@mipmap/article_fabulous_icon"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/intro"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/collection_icon"
+                android:text="@string/test"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/article_img"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_marginEnd="5dp"
+            android:src="@mipmap/ic_article"
+            tools:ignore="ContentDescription" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>
