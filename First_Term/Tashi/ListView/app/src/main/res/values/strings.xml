@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">ListView</string>
+    <string name="title_home">主页</string>
+    <string name="title_dashboard">更多</string>
+    <string name="title_notifications">通知</string>
+    <string name="next_activity">Next Activity</string>
+    <string name="test">1235</string>
+
+    <style name="title_home">Home</style>
 </resources>
