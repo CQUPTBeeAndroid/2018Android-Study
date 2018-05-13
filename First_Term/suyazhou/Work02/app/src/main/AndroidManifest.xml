@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="activitytest.example.com.work02_lv2">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="QQ"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SecondActivity"
+            android:label="联系人"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".AddFriendActivity"
+            android:label="添加联系人/群"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.Add" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".JimActivity"
+            android:label="jim"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.Jim" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TomActivity"
+            android:label="tom"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.Tom" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BillActivity"
+            android:label="bill"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.Bill" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".CreatGroupChatActivity"
+            android:label="创建群聊"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.CREAT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

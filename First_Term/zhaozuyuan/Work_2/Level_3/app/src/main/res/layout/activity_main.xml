@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+    <View
+        android:id="@+id/main_view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="仿微信小程序"
+        android:gravity="center|top"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:background="@color/colorNullVisibility"
+        android:textStyle="italic"/>
+
+    <!--账号-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/colorHalfVisibility">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="账号："
+            android:gravity="right|bottom"
+            android:textColor="@color/colorBlack"
+            android:textSize="15sp"/>
+
+        <EditText
+            android:id="@+id/main_account"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:hint="请输入账号"
+            android:textColor="@color/colorBlack"
+            android:textSize="14sp"
+            android:theme="@style/MyEditText"
+            />
+
+    </LinearLayout>
+
+    <!--密码-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/colorHalfVisibility">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="密码："
+            android:gravity="right|bottom"
+            android:textColor="@color/colorBlack"
+            android:textSize="15sp"/>
+
+        <EditText
+            android:id="@+id/main_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:hint="请输入密码"
+            android:textColor="@color/colorBlack"
+            android:textSize="14sp"
+            android:theme="@style/MyEditText"
+            />
+
+    </LinearLayout>
+
+    <!--登陆-->
+    <Button
+        android:id="@+id/main_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="登陆"
+        android:textSize="15sp"/>
+
+    <!--注册-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:text="还没有账号？"
+            android:gravity="right|center"
+            android:layout_marginRight="2dp"/>
+
+        <Button
+            android:id="@+id/main_register"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center|left"
+            android:text="注册"
+            android:background="@color/colorNullVisibility"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

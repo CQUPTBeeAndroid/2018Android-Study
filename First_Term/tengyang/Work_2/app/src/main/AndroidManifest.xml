@@ -33,6 +33,18 @@
                 <category android:name="com.example.mainactivity.MY_CATEGORYH" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".Main4Activity">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="com.example.mainactivity.ACTION_STARTHAA" />
+
+                <category android:name="com.example.mainactivity.MY_CATEGORYHAA" />
+            </intent-filter>
+
+        </activity>
+
     </application>
 
 </manifest>

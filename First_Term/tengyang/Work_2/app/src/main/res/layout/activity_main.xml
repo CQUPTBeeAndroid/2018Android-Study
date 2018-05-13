@@ -10,7 +10,6 @@
         android:id="@+id/button_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="点击进入星座页面" />
 
     <Button
         android:id="@+id/button_2"
