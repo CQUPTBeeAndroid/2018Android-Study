@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="activitytest.example.com.work02_lv2.SecondActivity">
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:hint="搜索" />
+
+    <Button
+        android:id="@+id/go"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/search"
+        android:layout_toRightOf="@+id/search"
+        android:text="GO"
+        android:background="@drawable/img01"/>
+
+    <Button
+        android:id="@+id/friend_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/search"
+        android:layout_marginTop="16dp"
+        android:text="Jim"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/friend_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/friend_1"
+        android:text="Tom"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/friend_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/friend_2"
+        android:text="Bill"
+        android:textAllCaps="false" />
+
+</RelativeLayout>
