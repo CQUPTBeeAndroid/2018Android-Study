@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
             accountEdit.setText(account);
             passEdit.setText(password);
             rememberPass.setChecked(true);
+
         }
 
         login = (Button) findViewById(R.id.login);
