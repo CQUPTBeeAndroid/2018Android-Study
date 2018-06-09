@@ -16,8 +16,8 @@
 ![image](https://github.com/zhaozuyuan/2018Android-Study/blob/master/imgs/zhaozuyuan_imgs/big5.png)
 ![image](https://github.com/zhaozuyuan/2018Android-Study/blob/master/imgs/zhaozuyuan_imgs/big4.png)
 ![image](https://github.com/zhaozuyuan/2018Android-Study/blob/master/imgs/zhaozuyuan_imgs/big3.png)
-![image](https://github.com/zhaozuyuan/2018Android-Study/blob/master/imgs/zhaozuyuan_imgs/big1)
-![image](https://github.com/zhaozuyuan/2018Android-Study/blob/master/imgs/zhaozuyuan_imgs/big2)
+![image](https://github.com/zhaozuyuan/2018Android-Study/blob/master/imgs/zhaozuyuan_imgs/big1.png)
+![image](https://github.com/zhaozuyuan/2018Android-Study/blob/master/imgs/zhaozuyuan_imgs/big2.png)
 
 
 
