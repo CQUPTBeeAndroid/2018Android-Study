@@ -49,7 +49,7 @@
         android:lines="1"
         android:hint="  请输入密码"
         android:textSize="15sp"
-        android:imeOptions="actionSend"
+        android:imeOptions="actionDone"
         android:singleLine="true"/>
 
     <EditText
