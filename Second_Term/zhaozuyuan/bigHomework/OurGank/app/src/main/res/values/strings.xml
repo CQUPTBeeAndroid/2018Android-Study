@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">OurGank</string>
+
+    <string name="up">&#xe718;</string>
+    <string name="down">&#xe719;</string>
+    <string name="back">&#xe610;</string>
+
+</resources>
