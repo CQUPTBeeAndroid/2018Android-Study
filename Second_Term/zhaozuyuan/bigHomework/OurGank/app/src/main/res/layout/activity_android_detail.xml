@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.AndroidDetail">
+
+    <com.example.hp.ourgank.Assets.TopBack
+        android:id="@+id/android_detail_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.example.hp.ourgank.Assets.TopBack>
+
+    <TextView
+        android:id="@+id/android_detail_text"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:background="@color/colorBlack"
+        android:textColor="@color/colorWhite"/>
+
+    <TextView
+        android:id="@+id/android_detail_text2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="下面是展示效果"
+        android:textSize="17sp"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorBlack" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlack">
+
+        <LinearLayout
+            android:id="@+id/android_detail_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

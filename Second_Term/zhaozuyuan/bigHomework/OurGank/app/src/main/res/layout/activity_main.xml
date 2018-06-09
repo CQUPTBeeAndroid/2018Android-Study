@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorCyan">
+
+        <TextView
+            android:id="@+id/show_data"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:layout_gravity="center"
+            android:textSize="17sp"
+            android:textColor="@color/colorBlack"
+            android:text="北京"
+            android:layout_marginStart="15dp"
+            android:background="@null"/>
+
+        <Button
+            android:id="@+id/tool_bar_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@null"
+            android:text="@string/down"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:textSize="26sp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/data_detail"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:visibility="gone"
+        android:paddingTop="5dp"
+        android:orientation="vertical"
+        android:background="@color/colorCyanS"
+        android:layout_below="@+id/tool_bar">
+
+        <TextView
+            android:id="@+id/detail_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_marginLeft="15dp"
+            android:textSize="15sp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginBottom="15dp"/>
+
+        <TextView
+            android:id="@+id/detail_weather1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_marginLeft="15dp"
+            android:textSize="15sp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/detail_weather2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:textSize="15sp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginLeft="15dp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/data_detail"
+        android:layout_marginTop="1dp"
+        android:background="@color/colorCyan">
+
+        <Button
+            android:id="@+id/welfare_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="福利"
+            android:layout_weight="2"
+            android:background="@null"/>
+
+        <Button
+            android:id="@+id/recommend_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="视频"
+            android:layout_weight="2"
+            android:background="@null"/>
+
+        <Button
+            android:id="@+id/android_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="安卓"
+            android:background="@null"/>
+
+        <Button
+            android:id="@+id/ios_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="IOS"
+            android:background="@null"/>
+
+        <Button
+            android:id="@+id/other_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="其它"
+            android:background="@null"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nav_scroll_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:layout_alignBottom="@id/nav_bar">
+
+        <ImageView
+            android:id="@+id/nav_scroll_bar"
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:background="@color/colorBlack"
+            android:scaleType="matrix" />
+
+        </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/nav_scroll_ll">
+
+    </android.support.v4.view.ViewPager>
+
+</RelativeLayout>

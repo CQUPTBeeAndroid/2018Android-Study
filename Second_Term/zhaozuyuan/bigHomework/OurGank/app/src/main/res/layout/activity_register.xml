@@ -1,0 +1,90 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    tools:context=".Activity.RegisterActivity"
+    android:orientation="vertical">
+
+
+    <com.example.hp.ourgank.Assets.TopBack
+        android:id="@+id/ios_detail_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.example.hp.ourgank.Assets.TopBack>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@null"
+        android:gravity="center"
+        android:text="OurGank"
+        android:textSize="24sp"
+        android:textStyle="italic|bold"
+        android:textColor="@color/colorPrimary"
+        android:layout_weight="4"/>
+
+    <EditText
+        android:id="@+id/register_edit_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/account"
+        android:drawablePadding="5dp"
+        android:layout_margin="10dp"
+        android:maxLines="1"
+        android:hint="  请输入账户"
+        android:textSize="15sp"
+        android:singleLine="true"/>
+
+    <EditText
+        android:id="@+id/register_edit_password1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="10dp"
+        android:drawableLeft="@drawable/password"
+        android:drawablePadding="5dp"
+        android:lines="1"
+        android:hint="  请输入密码"
+        android:textSize="15sp"
+        android:imeOptions="actionSend"
+        android:singleLine="true"/>
+
+    <EditText
+        android:id="@+id/register_edit_password2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="10dp"
+        android:drawableLeft="@drawable/password"
+        android:drawablePadding="5dp"
+        android:lines="1"
+        android:hint="  请再次输入密码"
+        android:textSize="15sp"
+        android:imeOptions="actionDone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@null"/>
+
+    <Button
+        android:id="@+id/register_register"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/colorCyanS"
+        android:layout_margin="10dp"
+        android:text="注册"
+        android:textSize="16sp"
+        android:textColor="@color/colorWhite"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:background="@null"
+        />
+
+</LinearLayout>
