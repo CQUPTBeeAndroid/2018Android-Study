@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <FrameLayout
+        android:id="@+id/frame_totol"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="1dp"
+        android:background="#E6E6E6"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+<RelativeLayout
+    android:id="@+id/first_layout"
+    android:layout_height="match_parent"
+    android:layout_width="0dp"
+    android:layout_weight="1">
+    <TextView
+        android:id="@+id/first_text"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="最新"
+        android:textSize="15dp"
+        android:textColor="#888888"/>
+</RelativeLayout>
+
+
+       <RelativeLayout
+           android:id="@+id/scend_layout"
+           android:layout_height="match_parent"
+           android:layout_width="0dp"
+           android:layout_weight="1">
+           <TextView
+               android:id="@+id/scend_text"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:gravity="center_horizontal|center_vertical"
+               android:text="分类"
+               android:textSize="15dp"
+               android:textColor="#888888"/>
+       </RelativeLayout>
+
+<RelativeLayout
+    android:id="@+id/last_layout"
+    android:layout_height="match_parent"
+    android:layout_width="0dp"
+    android:layout_weight="1">
+    <TextView
+        android:id="@+id/last_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="我的"
+        android:textSize="15dp"
+        android:textColor="#888888"/>
+</RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>
