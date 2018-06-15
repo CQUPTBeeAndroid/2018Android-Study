@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_scend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@color/colorPrimaryDark"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        >
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="干货分类"
+            android:textSize="30sp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            />
+    </android.support.v7.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/scend_image_all"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="37dp"
+            android:src="@drawable/icons8_all" />
+
+        <TextView
+            android:id="@+id/scend_text_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/scend_image_all"
+            android:layout_marginLeft="60dp"
+            android:layout_marginStart="60dp"
+            android:text="全部"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/scend_image_ios"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignTop="@+id/scend_image_all"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/icons8_ios" />
+
+        <TextView
+            android:id="@+id/text_ios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/scend_image_all"
+            android:layout_centerHorizontal="true"
+            android:text="ios"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/scend_image_android"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/scend_image_all"
+            android:layout_marginEnd="53dp"
+            android:layout_marginRight="53dp"
+            android:src="@drawable/icons8_android" />
+
+        <TextView
+            android:id="@+id/scend_text_android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/scend_image_android"
+            android:layout_alignStart="@+id/scend_image_android"
+            android:layout_below="@+id/scend_image_all"
+            android:text="Android"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            tools:ignore="UnknownId" />
+
+        <ImageView
+            android:id="@+id/scend_image_app"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignLeft="@+id/scend_image_all"
+            android:layout_alignStart="@+id/scend_image_all"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icons8_appstore" />
+
+        <TextView
+            android:id="@+id/scend_text_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/scend_text_all"
+            android:layout_alignStart="@+id/scend_text_all"
+            android:layout_below="@+id/scend_image_app"
+            android:text="App"
+            android:textAllCaps="false"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/scend_image_recommend"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/icons8_appstore" />
+
+        <TextView
+            android:id="@+id/scend_text_recommend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/scend_image_app"
+            android:layout_centerHorizontal="true"
+            android:text="瞎推荐"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/scend_image_ahead"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignLeft="@+id/scend_image_android"
+            android:layout_alignStart="@+id/scend_image_android"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icons8_html5" />
+
+        <TextView
+            android:id="@+id/scend_text_ahead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/scend_image_app"
+            android:layout_marginEnd="63dp"
+            android:layout_marginRight="63dp"
+            android:text="前端"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/scend_image_resource"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_above="@+id/scend_text_resuorce"
+            android:layout_alignStart="@+id/scend_image_all"
+            android:src="@drawable/icons8_html5"
+            android:layout_alignLeft="@+id/scend_image_all" />
+
+        <TextView
+            android:id="@+id/scend_text_resuorce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="33dp"
+            android:layout_marginStart="41dp"
+            android:text="资源拓展"
+            android:textSize="20sp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="41dp" />
+
+        <ImageView
+            android:id="@+id/scend_image_video"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignTop="@+id/scend_image_resource"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/icons8_video" />
+
+        <TextView
+            android:id="@+id/scend_text_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/scend_image_resource"
+            android:layout_centerHorizontal="true"
+            android:text="休息视频"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/scend_image_welfare"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/icons8_welfare"
+            android:layout_alignLeft="@+id/scend_image_android"
+            android:layout_alignStart="@+id/scend_image_android"
+            android:layout_alignTop="@+id/scend_image_resource"
+             />
+
+        <TextView
+            android:id="@+id/scend_text_welfare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/scend_text_ahead"
+            android:layout_below="@+id/scend_image_resource"
+            android:text="福利"
+            android:textSize="20sp"
+
+            android:layout_alignLeft="@+id/scend_text_ahead" />
+    </RelativeLayout>
+
+
+</LinearLayout>
