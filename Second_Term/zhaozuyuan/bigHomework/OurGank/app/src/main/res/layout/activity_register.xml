@@ -49,7 +49,6 @@
         android:lines="1"
         android:hint="  请输入密码"
         android:textSize="15sp"
-        android:imeOptions="actionSend"
         android:singleLine="true"/>
 
     <EditText
@@ -62,8 +61,8 @@
         android:drawablePadding="5dp"
         android:lines="1"
         android:hint="  请再次输入密码"
-        android:textSize="15sp"
-        android:imeOptions="actionDone" />
+        android:imeOptions="actionDone"
+        android:textSize="15sp" />
 
     <View
         android:layout_width="match_parent"
