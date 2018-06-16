@@ -8,6 +8,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -26,30 +27,25 @@ public class VideoTest extends AppCompatActivity implements View.OnClickListener
         videoView = (VideoView) findViewById(R.id.video_view);
         Button play = (Button) findViewById(R.id.play);
         Button pause = (Button) findViewById(R.id.pause);
-        Button replay = (Button) findViewById(R.id.stop);
-        play.callOnClick();
-        pause.callOnClick();
-        replay.callOnClick();
-        if (ContextCompat.checkSelfPermission(VideoTest.this , Manifest.permission.
-                WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(VideoTest.this , new String[]
-                    { Manifest.permission.WRITE_EXTERNAL_STORAGE} , 1);
+        Button replay = (Button) findViewById(R.id.replay);
+        play.setOnClickListener(this);
+        pause.setOnClickListener(this);
+        replay.setOnClickListener(this);
+        if (ContextCompat.checkSelfPermission(VideoTest.this , Manifest.permission
+                .WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(VideoTest.this , new String[] {Manifest.permission.WRITE_EXTERNAL_STORAGE} , 1);
         } else {
             initVideoPath();
         }
     }
 
     private void initVideoPath() {
-        try {
-            File file = new File(Environment.getExternalStorageDirectory(), "move.mp4");
-            videoView.setVideoPath(file.getPath());
-        } catch (Exception e){
-            e.printStackTrace();
-        }
+        File file = new File(Environment.getExternalStorageDirectory() , "QUIK_20171111_223001(1).mp4");
+        videoView.setVideoPath(file.getPath());
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode , String[] permission , int[] grantResults)  {
+    public void onRequestPermissionsResult (int requestCode , String[] permissions , int[] grantResults) {
         switch (requestCode) {
             case 1:
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
@@ -69,24 +65,27 @@ public class VideoTest extends AppCompatActivity implements View.OnClickListener
             case R.id.play:
                 if (!videoView.isPlaying()) {
                     videoView.start();
+                    Log.d("MainActivity" , "start");
                 }
+                break;
             case R.id.pause:
                 if (videoView.isPlaying()) {
                     videoView.pause();
+                    Log.d("MainActivity" , "pause");
                 }
+                break;
             case R.id.replay:
                 if (videoView.isPlaying()) {
                     videoView.resume();
                 }
                 break;
-            default:
         }
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (videoView != null) {
+        if (videoView != null){
             videoView.suspend();
         }
     }
