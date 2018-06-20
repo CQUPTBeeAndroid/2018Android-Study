@@ -139,7 +139,6 @@ public class IOSFragment extends Fragment {
                     break;
                 case 0:
                     Toast.makeText(context, "获取“IOS”资源失败！", Toast.LENGTH_SHORT).show();
-                    Log.d("TAG", getDataByHttp.getGetRawData());
                     break;
             }
         }
