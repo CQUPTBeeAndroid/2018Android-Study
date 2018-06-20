@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -18,6 +19,7 @@ import android.widget.Toast;
 import com.coolweather.android.db.City;
 import com.coolweather.android.db.County;
 import com.coolweather.android.db.Province;
+import com.coolweather.android.db.SelectedCounty;
 import com.coolweather.android.util.HttpUtil;
 import com.coolweather.android.util.Utility;
 
@@ -35,17 +37,23 @@ public class ChooseAreaFragment extends Fragment {
 
     private static final String TAG = "ChooseAreaFragment";
 
-    public static final int LEVEL_PROVINCE = 0;
+    public static final int LEVEL_SELECTEDCOUNTY = 0;
 
-    public static final int LEVEL_CITY = 1;
+    public static final int LEVEL_PROVINCE = 1;
 
-    public static final int LEVEL_COUNTY = 2;
+    public static final int LEVEL_CITY = 2;
+
+    public static final int LEVEL_COUNTY = 3;
 
     private ProgressDialog progressDialog;
 
     private TextView titleText;
 
     private Button backButton;
+
+    private Button addButton;
+
+    private Button deleteButton;
 
     private ListView listView;
 
@@ -69,6 +77,12 @@ public class ChooseAreaFragment extends Fragment {
     private List<County> countyList;
 
     /**
+     * 管理城市列表
+     */
+
+    private List<SelectedCounty> selectedCountyList;
+
+    /**
      * 选中的省份
      */
     private Province selectedProvince;
@@ -77,6 +91,12 @@ public class ChooseAreaFragment extends Fragment {
      * 选中的城市
      */
     private City selectedCity;
+
+    /**
+     * 选中的县
+     */
+    private SelectedCounty selectedCounty;
+    private County currentCounty;
 
     /**
      * 当前选中的级别
@@ -90,6 +110,8 @@ public class ChooseAreaFragment extends Fragment {
         View view = inflater.inflate(R.layout.choose_area, container, false);
         titleText = (TextView) view.findViewById(R.id.title_text);
         backButton = (Button) view.findViewById(R.id.back_button);
+        addButton = (Button) view.findViewById(R.id.add_button);
+        deleteButton = (Button) view.findViewById(R.id.delete_county);
         listView = (ListView) view.findViewById(R.id.list_view);
         adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, dataList);
         listView.setAdapter(adapter);
@@ -102,14 +124,8 @@ public class ChooseAreaFragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (currentLevel == LEVEL_PROVINCE) {
-                    selectedProvince = provinceList.get(position);
-                    queryCities();
-                } else if (currentLevel == LEVEL_CITY) {
-                    selectedCity = cityList.get(position);
-                    queryCounties();
-                } else if (currentLevel == LEVEL_COUNTY) {
-                    String weatherId = countyList.get(position).getWeatherId();
+                if (currentLevel == LEVEL_SELECTEDCOUNTY) {
+                    String weatherId = selectedCountyList.get(position).getWeatherId();
                     if (getActivity() instanceof MainActivity) {
                         Intent intent = new Intent(getActivity(), WeatherActivity.class);
                         intent.putExtra("weather_id", weatherId);
@@ -121,6 +137,27 @@ public class ChooseAreaFragment extends Fragment {
                         activity.swipeRefresh.setRefreshing(true);
                         activity.requestWeather(weatherId);
                     }
+                } else if (currentLevel == LEVEL_PROVINCE) {
+                    selectedProvince = provinceList.get(position);
+                    queryCities();
+                } else if (currentLevel == LEVEL_CITY) {
+                    selectedCity = cityList.get(position);
+                    queryCounties();
+                } else if (currentLevel == LEVEL_COUNTY) {
+                   currentCounty = countyList.get(position);
+                    dataList.clear();
+                    dataList.add(countyList.get(position).getCountyName());
+                    adapter.notifyDataSetChanged();
+                    listView.setSelection(0);
+                    if ((selectedCountyList = DataSupport.where("weatherId == ?",currentCounty.getWeatherId()).find(SelectedCounty.class)).size() == 0) {
+                        //把添加的城市加入到数据库selectedCounty
+                        SelectedCounty selectedCounty = new SelectedCounty();
+                        selectedCounty.setWeatherId(currentCounty.getWeatherId());
+                        selectedCounty.setCountyName(currentCounty.getCountyName());
+                        selectedCounty.save();
+                        currentLevel = 0;
+                        manageCounties();
+                    }
                 }
             }
         });
@@ -131,10 +168,61 @@ public class ChooseAreaFragment extends Fragment {
                     queryCities();
                 } else if (currentLevel == LEVEL_CITY) {
                     queryProvinces();
+                } else if (currentLevel == LEVEL_PROVINCE) {
+                    currentLevel = 0;
+                    dataList.clear();
+                    adapter.notifyDataSetChanged();
+                    manageCounties();
                 }
             }
         });
-        queryProvinces();
+
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (currentLevel == LEVEL_SELECTEDCOUNTY) {
+                    queryProvinces();
+                }
+            }
+        });
+
+//        deleteButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if (currentLevel == LEVEL_SELECTEDCOUNTY) {
+//                   if (selectedCountyList != null) {
+//                       selectedCounty = selectedCountyList.get(position).getCountyName();
+//
+//                   }
+//                }
+//            }
+//        });
+
+
+        manageCounties();
+
+    }
+
+    /**
+     * 添加县
+     */
+
+    private void manageCounties() {
+        titleText.setText("城市管理");
+        backButton.setVisibility(View.GONE);
+        addButton.setVisibility(View.VISIBLE);
+        selectedCountyList = DataSupport.findAll(SelectedCounty.class);
+        if (selectedCountyList != null) {
+            dataList.clear();
+            for (SelectedCounty selectedCounty : selectedCountyList) {
+                dataList.add(selectedCounty.getCountyName());
+            }
+            adapter.notifyDataSetChanged();
+            listView.setSelection(0);
+            currentLevel = LEVEL_SELECTEDCOUNTY;
+        } else {
+            queryProvinces();
+        }
     }
 
     /**
@@ -142,7 +230,8 @@ public class ChooseAreaFragment extends Fragment {
      */
     private void queryProvinces() {
         titleText.setText("中国");
-        backButton.setVisibility(View.GONE);
+        backButton.setVisibility(View.VISIBLE);
+        addButton.setVisibility(View.GONE);
         provinceList = DataSupport.findAll(Province.class);
         if (provinceList.size() > 0) {
             dataList.clear();
@@ -164,6 +253,7 @@ public class ChooseAreaFragment extends Fragment {
     private void queryCities() {
         titleText.setText(selectedProvince.getProvinceName());
         backButton.setVisibility(View.VISIBLE);
+        addButton.setVisibility(View.GONE);
         cityList = DataSupport.where("provinceid = ?", String.valueOf(selectedProvince.getId())).find(City.class);
         if (cityList.size() > 0) {
             dataList.clear();
@@ -186,6 +276,7 @@ public class ChooseAreaFragment extends Fragment {
     private void queryCounties() {
         titleText.setText(selectedCity.getCityName());
         backButton.setVisibility(View.VISIBLE);
+        addButton.setVisibility(View.GONE);
         countyList = DataSupport.where("cityid = ?", String.valueOf(selectedCity.getId())).find(County.class);
         if (countyList.size() > 0) {
             dataList.clear();
@@ -271,5 +362,6 @@ public class ChooseAreaFragment extends Fragment {
             progressDialog.dismiss();
         }
     }
+
 
 }
