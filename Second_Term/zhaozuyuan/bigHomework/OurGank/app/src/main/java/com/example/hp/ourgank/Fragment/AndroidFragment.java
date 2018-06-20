@@ -142,7 +142,6 @@ public class AndroidFragment extends Fragment {
                     break;
                 case 0:
                     Toast.makeText(context, "获取“Android”资源失败！", Toast.LENGTH_SHORT).show();
-                    Log.d("TAG",getDataByHttp.getGetRawData());
                     break;
             }
         }
